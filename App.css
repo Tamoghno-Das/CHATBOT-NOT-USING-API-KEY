@@ -1,0 +1,113 @@
+/* Base layout */
+body {
+    margin: 0;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #e0eafc, #cfdef3);
+    color: #333;
+}
+
+/* App container */
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    min-height: 100vh;
+}
+
+/* Chat box container */
+.chat-box {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 700px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Chat window */
+.chat-window {
+    background-color: #f7f9fc;
+    border: 1px solid #dce3ea;
+    border-radius: 8px;
+    padding: 16px;
+    height: 250px; /* Reduced from 350px */
+    overflow-y: auto;
+    margin-bottom: 16px;
+}
+
+/* Message bubbles */
+.user-msg, .bot-msg {
+    margin: 8px 0;
+    padding: 10px 14px;
+    font-size: 0.95rem;
+    border-radius: 18px;
+    max-width: 75%;
+}
+
+.user-msg {
+    background-color: #d1e7dd;
+    color: #0f5132;
+    align-self: flex-end;
+    border-bottom-right-radius: 0;
+}
+
+.bot-msg {
+    background-color: #e2e3e5;
+    color: #41464b;
+    align-self: flex-start;
+    border-bottom-left-radius: 0;
+}
+
+/* Input area */
+.input-area {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.input-area input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.input-area button {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.input-area button:hover {
+    background-color: #0056b3;
+}
+
+/* Header */
+.chat-box h2 {
+    margin-bottom: 20px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+    .chat-window {
+        height: 200px;
+        padding: 12px;
+    }
+}
